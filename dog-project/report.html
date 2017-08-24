@@ -14180,6 +14180,8 @@ test_{network} = bottleneck_features['test']</code></pre>
 </code></pre>
 <p><strong>Question 5:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  Describe why you think the architecture is suitable for the current problem.</p>
 <p><strong>Answer:</strong></p>
+<p>As Resnet50 is a tested and effective architecture in image recognition, I would like to use it as feature extractor. Thus, I use Resnet50 output as my model's input. It will provide good features for recognizing dogs. Then I add a global averaging layer to reduce the spacial size of the features, which will increase the computing speed. At last, I add a dense layer as the output layer with 133 possible labels, which is the number of all dog breeds in our data.</p>
+<p>I believe it will work or at least imrpove the performance as Resnet50 extracts good features from images that clearly reflect patterns of different dog breads.</p>
 
 </div>
 </div>
